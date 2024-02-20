@@ -89,28 +89,32 @@ const config: DocsThemeConfig = {
           content={frontMatter.description || 'Optimism Docs for developers'}
         />
         <link rel="icon" href="/img/icons/favicon.ico" type="image/x-icon"></link>
-        <script src='
-          setTimeout(function () {
-          const cookbookContainer = document.createElement("div");
-          cookbookContainer.id = "__cookbook";
-          cookbookContainer.setAttribute(
-          "data-api-key",
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWQ0ZTRiODcwYzRiNzY0NjgzM2FjNjMiLCJpYXQiOjE3MDg0NTEwMDAsImV4cCI6MjAyNDAyNzAwMH0.mXXkSNOIFPtX-fQcBZeJZlRvHQhh812DaJkLhuE44d4"
-          );
-          document.body.appendChild(cookbookContainer);
+        <script>
+          {`
+          if (window && !window.document.getElementById("__cookbook")) {
+            setTimeout(function () {
+              const cookbookContainer = document.createElement("div");
+              cookbookContainer.id = "__cookbook";
+              cookbookContainer.setAttribute(
+                "data-api-key",
+                "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWQ0ZTRiODcwYzRiNzY0NjgzM2FjNjMiLCJpYXQiOjE3MDg0NTEwMDAsImV4cCI6MjAyNDAyNzAwMH0.mXXkSNOIFPtX-fQcBZeJZlRvHQhh812DaJkLhuE44d4"
+              );
+              document.body.appendChild(cookbookContainer);
 
-          const cookbookStyles = document.createElement("link");
-          cookbookStyles.rel = "stylesheet";
-          cookbookStyles.href =
-          "https://cookbook-docsbot-staging.vercel.app/docsbot.css";
-          document.head.appendChild(cookbookStyles);
+              const cookbookStyles = document.createElement("link");
+              cookbookStyles.rel = "stylesheet";
+              cookbookStyles.href =
+                "https://cookbook-docsbot-staging.vercel.app/docsbot.css";
+              document.head.appendChild(cookbookStyles);
 
-          const cookbookScript = document.createElement("script");
-          cookbookScript.src =
-          "https://cookbook-docsbot-staging.vercel.app/docsbot.min.js";
-          document.head.appendChild(cookbookScript);
-            '
-          />
+              const cookbookScript = document.createElement("script");
+              cookbookScript.src =
+                "https://cookbook-docsbot-staging.vercel.app/docsbot.min.js";
+              document.head.appendChild(cookbookScript);
+            }, 1000);
+          }
+          `}
+        </script>
       </>
     )
   },
