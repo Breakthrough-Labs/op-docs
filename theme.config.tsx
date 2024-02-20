@@ -95,7 +95,7 @@ const config: DocsThemeConfig = {
           cookbookContainer.id = "__cookbook";
           cookbookContainer.setAttribute(
           "data-api-key",
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWNlNzUwZmZiMDBlZWUyNThjNmUxMjkiLCJpYXQiOjE3MDgwMjkxOTksImV4cCI6MjAyMzYwNTE5OX0.vrpJUZNG2jBFegOyENxgLJfStfyP7R1sQYE_I4XNo40"
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWQ0ZTRiODcwYzRiNzY0NjgzM2FjNjMiLCJpYXQiOjE3MDg0NTEwMDAsImV4cCI6MjAyNDAyNzAwMH0.mXXkSNOIFPtX-fQcBZeJZlRvHQhh812DaJkLhuE44d4"
           );
           document.body.appendChild(cookbookContainer);
 
