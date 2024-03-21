@@ -114,6 +114,7 @@ const config: DocsThemeConfig = {
           href="/img/icons/favicon.ico"
           type="image/x-icon"
         ></link>
+        {/* That's hacky af (we put div in head and react somehow under the hood moves that to body during render), but it doesn't cause hydration issues on contrary to doing it a right way, so we'll leave it this way for now */}
         <div
           id="__cookbook"
           data-api-key="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWQ0ZTRiODcwYzRiNzY0NjgzM2FjNjMiLCJpYXQiOjE3MDg0NTEwMDAsImV4cCI6MjAyNDAyNzAwMH0.mXXkSNOIFPtX-fQcBZeJZlRvHQhh812DaJkLhuE44d4"
@@ -125,8 +126,6 @@ const config: DocsThemeConfig = {
         ></script>
       </>
     );
-  },
-  navbar: {
   },
   // https://nextra.site/docs/docs-theme/theme-configuration
   // primaryHue: {
